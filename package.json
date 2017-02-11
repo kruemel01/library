@@ -1,7 +1,7 @@
 {
   "name": "library",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Simple library management solution with web client",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/kruemel01/library.git"
   },
-  "author": "",
+  "author": "Fabian Kästner",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kruemel01/library/issues"
