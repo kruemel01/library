@@ -5,13 +5,7 @@ const Colour = require("colour");
 const { logger } = require("./util");
 
 const app = new Koa();
-const router = new Router({
-    prefix: "/api/v1",
-});
-
-router.get("/", async (ctx) => {
-    ctx.body = "Hello";
-});
+const router = require("./api");
 
 app.use(logger);
 app.use(router.routes());
