@@ -1,15 +1,12 @@
 const Router = require("koa-router");
-const { transformReturn } = require("./util");
 
 module.exports = function (db) {
     const router = new Router({
         prefix: "/api/v1",
     });
 
-    router.use(transformReturn);
-
     router.get("/", async (ctx) => {
-        ctx.return = {
+        ctx.state.response = {
             apiVersion: 1
         }
     });
@@ -53,6 +50,8 @@ module.exports = function (db) {
 
     // delete media item
     router.delete("/media/:id", async (ctx) => {});
+
+
 
     return router;
 }

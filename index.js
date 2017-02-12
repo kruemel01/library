@@ -3,14 +3,15 @@
     const Router = require("koa-router");
     const Colour = require("colour");
 
-    const { logger } = require("./util");
+    const { logger, transformApiResponse } = require("./util");
 
     let db = await require("./db")();
 
     const app = new Koa();
     const router = require("./api")(db);
-
+    
     app.use(logger);
+    app.use(transformApiResponse);
     app.use(router.routes());
     app.use(router.allowedMethods());
 
