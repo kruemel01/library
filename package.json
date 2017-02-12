@@ -21,6 +21,9 @@
     "colour": "^0.7.1",
     "koa": "^2.0.0-alpha.7",
     "koa-router": "^7.0.1",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "pg": "^6.1.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.30.2"
   }
 }

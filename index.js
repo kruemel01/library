@@ -1,14 +1,18 @@
-const Koa = require("koa");
-const Router = require("koa-router");
-const Colour = require("colour");
+(async function() {
+    const Koa = require("koa");
+    const Router = require("koa-router");
+    const Colour = require("colour");
 
-const { logger } = require("./util");
+    const { logger } = require("./util");
 
-const app = new Koa();
-const router = require("./api");
+    let db = await require("./db")();
 
-app.use(logger);
-app.use(router.routes());
-app.use(router.allowedMethods());
+    const app = new Koa();
+    const router = require("./api")(db);
 
-app.listen(3000);
+    app.use(logger);
+    app.use(router.routes());
+    app.use(router.allowedMethods());
+
+    app.listen(3000);
+})();
