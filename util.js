@@ -1,11 +1,15 @@
 module.exports.logger = async function (ctx, next) {
     let receivedAt = Date.now();
+    ctx.state.log = [];
     await next();
     let processingTime = Date.now() - receivedAt;
     let status = ctx.status === 200 ?
         `${ctx.status} OK`.green
        :`${ctx.status} ERROR`.red;
     console.log(`${ctx.method} `.cyan + ctx.url.grey + " " + status + ` ${processingTime}ms`);
+    ctx.state.log.forEach((msg) => {
+        console.log(" > ".grey + msg);
+    });
 }
 
 module.exports.transformApiResponse = async function (ctx, next) {

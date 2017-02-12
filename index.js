@@ -9,6 +9,10 @@
 
     const app = new Koa();
     const router = require("./api")(db);
+
+    app.context.log = function (msg) {
+        this.state.log.push(msg);
+    };
     
     app.use(logger);
     app.use(transformApiResponse);
