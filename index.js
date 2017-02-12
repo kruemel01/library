@@ -1,5 +1,6 @@
 const Koa = require("koa");
 const Router = require("koa-router");
+const Colour = require("colour");
 
 const { logger } = require("./util");
 

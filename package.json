@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/kruemel01/library#readme",
   "dependencies": {
+    "colour": "^0.7.1",
     "koa": "^2.0.0-alpha.7",
     "koa-router": "^7.0.1"
   }
