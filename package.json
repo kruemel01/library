@@ -4,6 +4,7 @@
   "description": "Simple library management solution with web client",
   "main": "index.js",
   "scripts": {
+    "start": "node --harmony-async-await index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/kruemel01/library/issues"
   },
-  "homepage": "https://github.com/kruemel01/library#readme"
+  "homepage": "https://github.com/kruemel01/library#readme",
+  "dependencies": {
+    "koa": "^2.0.0-alpha.7",
+    "koa-router": "^7.0.1"
+  }
 }
