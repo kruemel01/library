@@ -4,7 +4,7 @@
   "description": "Simple library management solution with web client",
   "main": "index.js",
   "scripts": {
-    "start": "node --harmony-async-await index.js",
+    "start": "nodemon --harmony-async-await index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "dependencies": {
     "colour": "^0.7.1",
     "koa": "^2.0.0-alpha.7",
-    "koa-router": "^7.0.1"
+    "koa-router": "^7.0.1",
+    "nodemon": "^1.11.0"
   }
 }
